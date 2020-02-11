@@ -25,15 +25,15 @@ class RoundForm extends React.Component {
           <center>
           <label>
               Date:
-              <input className="form-control" 
+              <input className="form-control form-center" 
                 type="date" value={this.state.date} onChange={this.handleChange} />
             </label>
-          <p></p>S
+          <p></p>
           <label>
           Course:
-          <input className="form-control" type="text"
-                        value={this.state.course} onChange={this.handleChange}
-                        placeholder="Course played" size="50" maxLength="50" />
+          <input className="form-control form-center" type="text"
+                  value={this.state.course} onChange={this.handleChange}
+                  placeholder="Course played" size="50" maxLength="50" />
           </label>
           <p></p>
           <input type="submit" className="btn btn-primary" value="Submit" />
