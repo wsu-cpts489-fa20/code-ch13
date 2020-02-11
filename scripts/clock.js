@@ -48,7 +48,7 @@ class Clock extends React.Component {
       });
   }
 
-buttonClick() {
+buttonClick = () => {
   this.setState({
       visible: !this.state.visible
     });
