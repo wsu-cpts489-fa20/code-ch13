@@ -9,16 +9,7 @@
 			{
 				"pattern": {
 					"type": "string",
-					"expression": "onChange={this.handleChange}",
-					"ignoreCase": false,
-					"wholeMatch": false
-				},
-				"color": "yellow"
-			},
-			{
-				"pattern": {
-					"type": "string",
-					"expression": "handleChange = (event) => {\r\n      this.setState({date: event.target.value});\r\n    }",
+					"expression": "form-center",
 					"ignoreCase": false,
 					"wholeMatch": false
 				},

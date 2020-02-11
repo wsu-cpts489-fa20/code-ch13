@@ -4,11 +4,13 @@ class RoundForm extends React.Component {
       //Create date object for today, taking time zone into consideration
       let today = new Date(Date.now()-(new Date()).getTimezoneOffset()*60000);
       //store date as ISO string
-      this.state = {date:  today.toISOString().substr(0,10)}; 
+      this.state = {date:  today.toISOString().substr(0,10),
+                    course: ''}; 
     }
   
     handleChange = (event) => {
-      this.setState({date: event.target.value});
+      const name = event.target.name;
+      this.setState({[name]: event.target.value});   
     }
   
     handleSubmit = (event) => {
@@ -23,9 +25,16 @@ class RoundForm extends React.Component {
           <center>
           <label>
               Date:
-              <input id="roundDate" className="form-control form-center" 
+              <input className="form-control" 
                 type="date" value={this.state.date} onChange={this.handleChange} />
             </label>
+          <p></p>S
+          <label>
+          Course:
+          <input className="form-control" type="text"
+                        value={this.state.course} onChange={this.handleChange}
+                        placeholder="Course played" size="50" maxLength="50" />
+          </label>
           <p></p>
           <input type="submit" className="btn btn-primary" value="Submit" />
           </center>
