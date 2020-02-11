@@ -9,7 +9,7 @@
 			{
 				"pattern": {
 					"type": "string",
-					"expression": "static getDerivedStateFromProps(nextProps, prevState) {\r\n    if (nextProps.date != prevState.date) {\r\n      return {date: nextProps.date};\r\n    }  else {\r\n      return null;\r\n    }\r\n  }",
+					"expression": "visible: true",
 					"ignoreCase": false,
 					"wholeMatch": false
 				},
@@ -18,7 +18,25 @@
 			{
 				"pattern": {
 					"type": "string",
-					"expression": "//legacy code: Will also work\r\n// componentWillReceiveProps(nextProps) {\r\n//         this.setState({date: nextProps.date});\r\n//  }",
+					"expression": "{this.state.visible ? <h2>It is <FormattedDate \r\n        date={this.state.date} />.</h2> : null}\r\n        <button className=\"btn btn-primary\" onClick={this.buttonClick}>\r\n        {this.state.visible ? \"Hide Time\" : \"Show Time\"}</button>",
+					"ignoreCase": false,
+					"wholeMatch": false
+				},
+				"color": "yellow"
+			},
+			{
+				"pattern": {
+					"type": "string",
+					"expression": "buttonClick {\r\n  this.setState({\r\n      visible: !this.state.visible\r\n    });\r\n}",
+					"ignoreCase": false,
+					"wholeMatch": false
+				},
+				"color": "yellow"
+			},
+			{
+				"pattern": {
+					"type": "string",
+					"expression": "buttonClick() {\r\n  this.setState({\r\n      visible: !this.state.visible\r\n    });\r\n}",
 					"ignoreCase": false,
 					"wholeMatch": false
 				},

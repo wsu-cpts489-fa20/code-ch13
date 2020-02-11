@@ -28,7 +28,7 @@ class Clock extends React.Component {
 
   constructor(props) {
       super(props);
-      this.state = {date: new Date()};
+      this.state = {date: new Date(), visible: true};
     }
 
   componentDidMount() {
@@ -48,11 +48,20 @@ class Clock extends React.Component {
       });
   }
 
- render() {
+buttonClick() {
+  this.setState({
+      visible: !this.state.visible
+    });
+}
+ 
+render() {
     return (
       <div>
         <h1>Hello CptS 489 Students!</h1>
-        <h2>It is <FormattedDate date={this.state.date}/>.</h2>
+        {this.state.visible ? <h2>It is <FormattedDate 
+        date={this.state.date} />.</h2> : null}
+        <button className="btn btn-primary" onClick={this.buttonClick}>
+        {this.state.visible ? "Hide Time" : "Show Time"}</button>
       </div>
     );
   }
