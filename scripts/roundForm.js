@@ -87,7 +87,8 @@ class RoundForm extends React.Component {
                 onChange={this.handleChange} />
           </label>
           <p></p>
-          <input type="submit" className="btn btn-primary" value="Submit" />
+          <input type="submit" className="btn btn-primary btn-color-theme" 
+             style={{width: "70%", fontSize: "36px"}} value="Save Data" />
           </center>
         </form>
       );

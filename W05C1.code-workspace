@@ -23,6 +23,24 @@
 					"wholeMatch": false
 				},
 				"color": "yellow"
+			},
+			{
+				"pattern": {
+					"type": "string",
+					"expression": ".btn-color-theme {\r\n    background-color: #13294E;\r\n    color: white; \r\n}",
+					"ignoreCase": false,
+					"wholeMatch": false
+				},
+				"color": "yellow"
+			},
+			{
+				"pattern": {
+					"type": "string",
+					"expression": " <p></p>\r\n          <input type=\"submit\" className=\"btn btn-primary btn-color-theme\" \r\n             style={{width: \"70%\", fontSize: \"36px\"}} value=\"Save Data\" />\r\n          </center>",
+					"ignoreCase": false,
+					"wholeMatch": false
+				},
+				"color": "yellow"
 			}
 		]
 	}
