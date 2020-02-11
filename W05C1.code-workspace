@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"textmarker.savedHighlights": [
+			{
+				"pattern": {
+					"type": "string",
+					"expression": "class FormattedDate extends React.Component {\r\n  constructor(props) {\r\n    super(props);\r\n    this.state = {date: props.date};\r\n  }\r\n\r\n  render() {\r\n    return this.state.date.toLocaleTimeString();\r\n  }\r\n\r\n}",
+					"ignoreCase": false,
+					"wholeMatch": false
+				},
+				"color": "yellow"
+			},
+			{
+				"pattern": {
+					"type": "string",
+					"expression": " <h2>It is <FormattedDate date={this.state.date}/>.</h2>",
+					"ignoreCase": false,
+					"wholeMatch": false
+				},
+				"color": "yellow"
+			}
+		]
+	}
+}
