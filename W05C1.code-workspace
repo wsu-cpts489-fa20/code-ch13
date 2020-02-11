@@ -9,7 +9,16 @@
 			{
 				"pattern": {
 					"type": "string",
-					"expression": "form-center",
+					"expression": "<label>\r\n          Type:\r\n          <select name=\"type\" value={this.state.type} \r\n            className=\"form-control form-center\" onChange={this.handleChange}>\r\n            <option value=\"practice\">Practice</option>\r\n            <option value=\"tournament\">Tournament</option>\r\n          </select> \r\n          </label>",
+					"ignoreCase": false,
+					"wholeMatch": false
+				},
+				"color": "yellow"
+			},
+			{
+				"pattern": {
+					"type": "string",
+					"expression": "type: \"practice\"",
 					"ignoreCase": false,
 					"wholeMatch": false
 				},
