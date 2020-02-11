@@ -12,6 +12,11 @@ class FormattedDate extends React.Component {
     }
   }
 
+//legacy code: Will also work
+// componentWillReceiveProps(nextProps) {
+//         this.setState({date: nextProps.date});
+//  }
+
   render() {
     return this.state.date.toLocaleTimeString();
   }

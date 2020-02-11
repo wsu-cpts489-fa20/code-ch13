@@ -14,6 +14,15 @@
 					"wholeMatch": false
 				},
 				"color": "yellow"
+			},
+			{
+				"pattern": {
+					"type": "string",
+					"expression": "//legacy code: Will also work\r\n// componentWillReceiveProps(nextProps) {\r\n//         this.setState({date: nextProps.date});\r\n//  }",
+					"ignoreCase": false,
+					"wholeMatch": false
+				},
+				"color": "yellow"
 			}
 		]
 	}
