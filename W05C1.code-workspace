@@ -9,7 +9,7 @@
 			{
 				"pattern": {
 					"type": "string",
-					"expression": "constructor(props) {\r\n      super(props);\r\n      //Create date object for today, taking time zone into consideration\r\n      let today = new Date(Date.now()-(new Date()).getTimezoneOffset()*60000);\r\n      //store date as ISO string\r\n      this.state = {date:  today.toISOString().substr(0,10)}; \r\n    }",
+					"expression": "onChange={this.handleChange}",
 					"ignoreCase": false,
 					"wholeMatch": false
 				},
@@ -18,16 +18,7 @@
 			{
 				"pattern": {
 					"type": "string",
-					"expression": "<label>\r\n              Date:\r\n              <input id=\"roundDate\" className=\"form-control form-center\" \r\n                type=\"date\" value={this.state.date} />\r\n            </label>\r\n          <p></p>",
-					"ignoreCase": false,
-					"wholeMatch": false
-				},
-				"color": "yellow"
-			},
-			{
-				"pattern": {
-					"type": "string",
-					"expression": "<label>\r\n              Date:\r\n              <input id=\"roundDate\" className=\"form-control form-center\" \r\n                type=\"date\"/>\r\n            </label>",
+					"expression": "handleChange = (event) => {\r\n      this.setState({date: event.target.value});\r\n    }",
 					"ignoreCase": false,
 					"wholeMatch": false
 				},

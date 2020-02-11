@@ -8,8 +8,7 @@ class RoundForm extends React.Component {
     }
   
     handleChange = (event) => {
-      const name = event.target.name;
-      this.setState({[name]: event.target.value});
+      this.setState({date: event.target.value});
     }
   
     handleSubmit = (event) => {
@@ -17,6 +16,7 @@ class RoundForm extends React.Component {
       event.preventDefault();
     }
   
+
     render() {
       return (
         <form onSubmit={this.handleSubmit}>
@@ -24,7 +24,7 @@ class RoundForm extends React.Component {
           <label>
               Date:
               <input id="roundDate" className="form-control form-center" 
-                type="date" value={this.state.date} />
+                type="date" value={this.state.date} onChange={this.handleChange} />
             </label>
           <p></p>
           <input type="submit" className="btn btn-primary" value="Submit" />
